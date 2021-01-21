@@ -31,6 +31,11 @@
         public string Gender { get; set; }
 
         /// <summary>
+        /// Удален?
+        /// </summary>
+        public bool IsDeleted { get; set; }
+
+        /// <summary>
         /// Отдел
         /// </summary>
         public virtual DepartmentDomain Department { get; set; }
