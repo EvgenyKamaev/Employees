@@ -78,7 +78,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Mapping\" />
     <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
@@ -91,6 +90,27 @@
     <Compile Include="Domain\EmployesDomain.cs" />
     <Compile Include="Domain\ExperienceDomain.cs" />
     <Compile Include="Domain\LanguagesDomain.cs" />
+    <Compile Include="Mapping\DepartmentMap.cs" />
+    <Compile Include="Mapping\EmployesMap.cs" />
+    <Compile Include="Mapping\ExperienceMap.cs" />
+    <Compile Include="Mapping\LanguagesMap.cs" />
+    <Compile Include="Migrations\202101211131562_v.0.1.cs" />
+    <Compile Include="Migrations\202101211131562_v.0.1.designer.cs">
+      <DependentUpon>202101211131562_v.0.1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101211136278_v.0.2.cs" />
+    <Compile Include="Migrations\202101211136278_v.0.2.designer.cs">
+      <DependentUpon>202101211136278_v.0.2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202101211131562_v.0.1.resx">
+      <DependentUpon>202101211131562_v.0.1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101211136278_v.0.2.resx">
+      <DependentUpon>202101211136278_v.0.2.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

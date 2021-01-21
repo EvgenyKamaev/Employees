@@ -9,6 +9,9 @@ namespace Employes.Infrastructure.Domain
         /// </summary>
         public int ExperienceId { get; set; }
 
+
+        public int LanguageId { get; set; }
+
         /// <summary>
         /// Сотрудник
         /// </summary>

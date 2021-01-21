@@ -13,10 +13,5 @@ namespace Employes.Infrastructure.Domain
         /// Название 
         /// </summary>
         public string Name { get; set; }
-
-        /// <summary>
-        /// Опыт
-        /// </summary>
-        public virtual List<ExperienceDomain> Experiences { get; set; } = new List<ExperienceDomain>();
     }
 }

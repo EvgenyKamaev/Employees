@@ -35,9 +35,5 @@
         /// </summary>
         public virtual DepartmentDomain Department { get; set; }
 
-        /// <summary>
-        /// Опыт
-        /// </summary>
-        public virtual ExperienceDomain Experience { get; set; }
     }
 }
