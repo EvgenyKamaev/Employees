@@ -1,3 +1,4 @@
+using Employes.Web.App_Start;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace Employes.Web
     {
         protected void Application_Start()
         {
+            RegisterConfig.RegisterDependencies();
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

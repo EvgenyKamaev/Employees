@@ -1,3 +1,5 @@
+D:\Projects\Employes\Employes.Web\obj\Debug\Employes.Web.csprojAssemblyReference.cache
+D:\Projects\Employes\Employes.Web\obj\Debug\Employes.Web.csproj.CoreCompileInputs.cache
 D:\Projects\Employes\Employes.Web\bin\Employes.Web.dll.config
 D:\Projects\Employes\Employes.Web\bin\Employes.Web.dll
 D:\Projects\Employes\Employes.Web\bin\Employes.Web.pdb
@@ -67,6 +69,7 @@ D:\Projects\Employes\Employes.Web\bin\System.Runtime.CompilerServices.Unsafe.dll
 D:\Projects\Employes\Employes.Web\bin\System.Threading.Tasks.Extensions.dll
 D:\Projects\Employes\Employes.Web\bin\System.Web.Helpers.dll
 D:\Projects\Employes\Employes.Web\bin\System.Web.Http.dll
+D:\Projects\Employes\Employes.Web\bin\System.Web.Http.WebHost.dll
 D:\Projects\Employes\Employes.Web\bin\System.Web.Mvc.dll
 D:\Projects\Employes\Employes.Web\bin\System.Web.Optimization.dll
 D:\Projects\Employes\Employes.Web\bin\System.Web.Razor.dll
@@ -92,6 +95,7 @@ D:\Projects\Employes\Employes.Web\bin\System.Numerics.Vectors.xml
 D:\Projects\Employes\Employes.Web\bin\System.Runtime.CompilerServices.Unsafe.xml
 D:\Projects\Employes\Employes.Web\bin\System.Threading.Tasks.Extensions.xml
 D:\Projects\Employes\Employes.Web\bin\System.Web.Http.xml
+D:\Projects\Employes\Employes.Web\bin\System.Web.Http.WebHost.xml
 D:\Projects\Employes\Employes.Web\bin\System.Web.Helpers.xml
 D:\Projects\Employes\Employes.Web\bin\System.Web.Mvc.xml
 D:\Projects\Employes\Employes.Web\bin\System.Web.Optimization.xml
@@ -109,8 +113,6 @@ D:\Projects\Employes\Employes.Web\bin\ru\System.Web.Razor.resources.dll
 D:\Projects\Employes\Employes.Web\bin\ru\System.Web.WebPages.resources.dll
 D:\Projects\Employes\Employes.Web\bin\ru\System.Web.WebPages.Deployment.resources.dll
 D:\Projects\Employes\Employes.Web\bin\ru\System.Web.WebPages.Razor.resources.dll
-D:\Projects\Employes\Employes.Web\obj\Debug\Employes.Web.csprojAssemblyReference.cache
-D:\Projects\Employes\Employes.Web\obj\Debug\Employes.Web.csproj.CoreCompileInputs.cache
 D:\Projects\Employes\Employes.Web\obj\Debug\Employes.Web.csproj.CopyComplete
 D:\Projects\Employes\Employes.Web\obj\Debug\Employes.Web.dll
 D:\Projects\Employes\Employes.Web\obj\Debug\Employes.Web.pdb
