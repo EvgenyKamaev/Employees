@@ -1,5 +1,3 @@
-D:\Projects\Employes\Employes.Web\obj\Debug\Employes.Web.csprojAssemblyReference.cache
-D:\Projects\Employes\Employes.Web\obj\Debug\Employes.Web.csproj.CoreCompileInputs.cache
 D:\Projects\Employes\Employes.Web\bin\Employes.Web.dll.config
 D:\Projects\Employes\Employes.Web\bin\Employes.Web.dll
 D:\Projects\Employes\Employes.Web\bin\Employes.Web.pdb
@@ -113,6 +111,8 @@ D:\Projects\Employes\Employes.Web\bin\ru\System.Web.Razor.resources.dll
 D:\Projects\Employes\Employes.Web\bin\ru\System.Web.WebPages.resources.dll
 D:\Projects\Employes\Employes.Web\bin\ru\System.Web.WebPages.Deployment.resources.dll
 D:\Projects\Employes\Employes.Web\bin\ru\System.Web.WebPages.Razor.resources.dll
+D:\Projects\Employes\Employes.Web\obj\Debug\Employes.Web.csprojAssemblyReference.cache
+D:\Projects\Employes\Employes.Web\obj\Debug\Employes.Web.csproj.CoreCompileInputs.cache
 D:\Projects\Employes\Employes.Web\obj\Debug\Employes.Web.csproj.CopyComplete
 D:\Projects\Employes\Employes.Web\obj\Debug\Employes.Web.dll
 D:\Projects\Employes\Employes.Web\obj\Debug\Employes.Web.pdb

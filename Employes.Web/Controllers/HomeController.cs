@@ -1,4 +1,5 @@
 ﻿using Employes.Infrastructure.Services.Interfaces;
+using Employes.Web.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,22 +19,15 @@ namespace Employes.Web.Controllers
 
         public ActionResult Index()
         {
-            _employesService.GetAllEmployes();
-            return View();
-        }
+            var data = _employesService.GetAllEmployes().Select(employe => new HomeModel()
+            {
+                LastName = employe.LastName,
+                FirstName = employe.FirstName,
+                Age = employe.Age,
+                Department = employe.Department.Name
+            }).ToList();
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            return View(data);
         }
     }
 }
