@@ -12,6 +12,13 @@
 </div>
 <!-- /ko -->
 <!-- ko if: allData().length != 0 || currentData().length != 0-->
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+        <button class="btn btn-primary" type="button">Поиск</button>
+    </div>
+    <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+</div>
+<br />
 <div class="row">
     <div class="col">
         <table class="table table-striped box table-hover">
@@ -45,7 +52,7 @@
 <!-- /ko -->
 <br />
 <div>
-    <button type="submit" class="btn btn-outline-primary" data-bind="click: addEmploye">Добавить</button>
+    <button type="submit" class="btn btn-outline-primary" data-toggle="modal" data-target="#addModal">Добавить</button>
 </div>
 <!-- ko if: allData().length > 0 -->
 <div>
@@ -67,6 +74,25 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
                 <button type="button" class="btn btn-primary" data-bind="click: deleteEmploye" data-dismiss="modal">Удалить</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addModalLabel">Добавление сотрудника</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Зздесь описать поля
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                <button type="button" class="btn btn-primary" data-bind="click: addEmploye" data-dismiss="modal">Добавить</button>
             </div>
         </div>
     </div>
