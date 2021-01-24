@@ -19,8 +19,9 @@ namespace Employes.Web.Controllers
 
         public ActionResult Index()
         {
-            var data = _employesService.GetAllEmployes().Select(employe => new HomeModel()
+            var data = _employesService.GetAllNotDeletedEmployes().Select(employe => new HomeModel()
             {
+                Id = employe.EmployeId,
                 LastName = employe.LastName,
                 FirstName = employe.FirstName,
                 Age = employe.Age,
@@ -28,6 +29,19 @@ namespace Employes.Web.Controllers
             }).ToList();
 
             return View(data);
+        }
+
+        [HttpGet]
+        public void DeleteEmploye(int employeId)
+        {
+            try
+            {
+                _employesService.DeleteEmploye(employeId);
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
         }
     }
 }

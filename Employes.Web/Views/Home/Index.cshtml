@@ -21,25 +21,56 @@
                     <th scope="col"><p class="text-center">Имя</p></th>
                     <th scope="col"><p class="text-center">Возраст</p></th>
                     <th scope="col"><p class="text-center">Отдел</p></th>
+                    <th scope="col"><p class="text-center">Удалить</p></th>
                 </tr>
             </thead>
             <tbody data-bind="foreach: currentData">
-                <tr data-bind="click: $parent.showInfo">
-                    <td><p class="text-center" data-bind="text: LastName"></td>
-                    <td><p class="text-center" data-bind="text: FirstName"></td>
-                    <td><p class="text-center" data-bind="text: Age"></td>
-                    <td><p class="text-center" data-bind="text: Department"></td>
+                <tr>
+                    <td><p class="text-center" data-bind="text: LastName, click: $parent.showInfo"></td>
+                    <td><p class="text-center" data-bind="text: FirstName, click: $parent.showInfo"></td>
+                    <td><p class="text-center" data-bind="text: Age, click: $parent.showInfo"></td>
+                    <td><p class="text-center" data-bind="text: Department, click: $parent.showInfo"></td>
+                    <td>
+                        <div class="text-center">
+                            <a class="btn btn-danger text-center" data-toggle="modal" data-target="#deleteModal" data-bind="click: $parent.selectEmploye">
+                                <i class="fa fa-trash-o fa-lg"></i>
+                            </a>
+                        </div>
+                    </td>
                 </tr>
             </tbody>
         </table>
     </div>
 </div>
 <!-- /ko -->
+<br />
+<div>
+    <button type="submit" class="btn btn-outline-primary" data-bind="click: addEmploye">Добавить</button>
+</div>
 <!-- ko if: allData().length > 0 -->
 <div>
     <button type="submit" class="btn btn-outline-primary" data-bind="click: showMore">Больше сотрудников</button>
 </div>
 <!-- /ko -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Подтверждение действия</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Удалить сотрудника?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                <button type="button" class="btn btn-primary" data-bind="click: deleteEmploye" data-dismiss="modal">Удалить</button>
+            </div>
+        </div>
+    </div>
+</div>
 @section Scripts{
     @Scripts.Render("~/bundles/employeList")
     <script type="text/javascript">

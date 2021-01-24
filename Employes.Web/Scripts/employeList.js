@@ -1,5 +1,4 @@
 ﻿var employeListModel = function (a) {
-    console.log(a);
     var self = this;
     self.allData = ko.observableArray([]);
     self.currentData = ko.observableArray([]);
@@ -46,20 +45,30 @@
                 }
             })
         },
-        selectReview: function (id) {
-            if (self.selectedReview() !== null && self.selectedReview() !== '')
-                self.selectedReview(null);
-            self.selectedReview(id);
+        selectEmploye: function (id) {
+            if (self.selectedEmploye() !== null && self.selectedEmploye() !== '')
+                self.selectedEmploye(null);
+            self.selectedEmploye(id);
         },
-        deleteReview: function () {
+        deleteEmploye: function () {
             $.ajax({
-                url: '/Admin/DeleteReview?reviewId=' + self.selectedReview().Id,
+                url: '/Home/DeleteEmploye?employeId=' + self.selectedEmploye().Id,
                 type: 'GET',
                 success: function () {
-                    const index = self.currentData.indexOf(self.selectedReview());
+                    const index = self.currentData.indexOf(self.selectedEmploye());
                     if (index > -1) {
                         self.currentData.splice(index, 1);
                     };
+                }
+            })
+        },
+        addEmploye: function () {
+            $.ajax({
+                url: '/Home/AddEmploye',
+                type: 'POST',
+                data: info.ReviewInfo,
+                success: function () {
+                    console.log(1);
                 }
             })
         }
