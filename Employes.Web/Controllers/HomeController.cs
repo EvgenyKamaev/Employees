@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Employes.Infrastructure.Services.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,8 +9,16 @@ namespace Employes.Web.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IEmployesService _employesService;
+
+        public HomeController(IEmployesService employesService)
+        {
+            _employesService = employesService;
+        }
+
         public ActionResult Index()
         {
+            _employesService.GetAllEmployes();
             return View();
         }
 

@@ -26,5 +26,13 @@ namespace Employes.Infrastructure.Data
 
         public new DbSet<TEntity> Set<TEntity>() where TEntity : BaseDomain
             => base.Set<TEntity>();
+
+        public DbSet<DepartmentDomain> Departments { get; set; }
+        public DbSet<LanguagesDomain> Languages { get; set; }
+
+        static EmployesContext()
+        {
+            Database.SetInitializer<EmployesContext>(new DataInitializer());
+        }
     }
 }

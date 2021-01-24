@@ -79,6 +79,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Compile Include="Data\DataInitializer.cs" />
     <Compile Include="Data\EfRepository.cs" />
     <Compile Include="Data\EmployesContext.cs" />
     <Compile Include="Data\Interfaces\IDbContext.cs" />

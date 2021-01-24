@@ -22,7 +22,7 @@ namespace Employes.Infrastructure.Services.Interfaces
         /// Получить всех сотрудников
         /// </summary>
         /// <returns></returns>
-        List<EmployesDomain> GetAllEmployes();
+        EmployesDomain[] GetAllEmployes();
 
         /// <summary>
         /// Получить всех неудаленных сотрудников

@@ -25,9 +25,9 @@ namespace Employes.Infrastructure.Services
             _employesRepository.Insert(employe);
         }
 
-        public List<EmployesDomain> GetAllEmployes()
+        public EmployesDomain[] GetAllEmployes()
         {
-            return _employesRepository.Table.ToList();
+            return _employesRepository.Table.ToArray();
         }
 
         public List<EmployesDomain> GetAllNotDeletedEmployes()

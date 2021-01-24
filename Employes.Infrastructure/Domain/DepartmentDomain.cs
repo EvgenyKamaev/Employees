@@ -21,10 +21,5 @@ namespace Employes.Infrastructure.Domain
         /// Этаж
         /// </summary>
         public int Floor { get; set; }
-
-        /// <summary>
-        /// Сотрудники
-        /// </summary>
-        public virtual List<EmployesDomain> Employes { get; set; } = new List<EmployesDomain>();
     }
 }
