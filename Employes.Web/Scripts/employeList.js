@@ -1,4 +1,5 @@
 ﻿var employeListModel = function (a) {
+    console.log(a);
     var self = this;
     self.allData = ko.observableArray([]);
     self.currentData = ko.observableArray([]);

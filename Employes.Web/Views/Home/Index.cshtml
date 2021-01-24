@@ -4,44 +4,46 @@
 @using System.Web.Optimization
 @using Newtonsoft.Json
 @model List<Employes.Web.Models.HomeModel>
-    <h2>Информация о сотрудниках компании</h2>
-    <br />
-     <div style="color:red">
-         Список сотрудников пуст.
-     </div>
-    <!-- ko if: allData().length === 0 && currentData().length === 0-->
-    <div class="row" data-bind="if: ">
-        <div class="col">
-            <table class="table table-striped box table-hover">
-                <thead>
-                    <tr>
-                        <th scope="col"><p class="text-center">Фамилия</p></th>
-                        <th scope="col"><p class="text-center">Имя</p></th>
-                        <th scope="col"><p class="text-center">Возраст</p></th>
-                        <th scope="col"><p class="text-center">Отдел</p></th>
-                    </tr>
-                </thead>
-                <tbody data-bind="foreach: currentData">
-                    <tr data-bind="click: $parent.showInfo">
-                        <td><p class="text-center" data-bind="text: LastName"></td>
-                        <td><p class="text-center" data-bind="text: FirstName"></td>
-                        <td><p class="text-center" data-bind="text: Age"></td>
-                        <td><p class="text-center" data-bind="text: Department"></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+<h2>Информация о сотрудниках компании</h2>
+<br />
+<!-- ko if: allData().length === 0 && currentData().length === 0-->
+<div style="color:red">
+    Список сотрудников пуст.
+</div>
+<!-- /ko -->
+<!-- ko if: allData().length != 0 || currentData().length != 0-->
+<div class="row">
+    <div class="col">
+        <table class="table table-striped box table-hover">
+            <thead>
+                <tr>
+                    <th scope="col"><p class="text-center">Фамилия</p></th>
+                    <th scope="col"><p class="text-center">Имя</p></th>
+                    <th scope="col"><p class="text-center">Возраст</p></th>
+                    <th scope="col"><p class="text-center">Отдел</p></th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: currentData">
+                <tr data-bind="click: $parent.showInfo">
+                    <td><p class="text-center" data-bind="text: LastName"></td>
+                    <td><p class="text-center" data-bind="text: FirstName"></td>
+                    <td><p class="text-center" data-bind="text: Age"></td>
+                    <td><p class="text-center" data-bind="text: Department"></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-    <!-- /ko -->
-    <!-- ko if: allData().length > 0 -->
-    <div>
-        <button type="submit" class="btn btn-outline-primary" data-bind="click: showMore">Больше сотрудников</button>
-    </div>
-    <!-- /ko -->
-    @section Scripts{
-        @Scripts.Render("~/bundles/employeList")
-        <script type="text/javascript">
+</div>
+<!-- /ko -->
+<!-- ko if: allData().length > 0 -->
+<div>
+    <button type="submit" class="btn btn-outline-primary" data-bind="click: showMore">Больше сотрудников</button>
+</div>
+<!-- /ko -->
+@section Scripts{
+    @Scripts.Render("~/bundles/employeList")
+    <script type="text/javascript">
     var employeListModel = employeListModel(@Html.Raw(JsonConvert.SerializeObject(this.Model)));
     ko.applyBindings(employeListModel);
-        </script>
-    }
+    </script>
+}

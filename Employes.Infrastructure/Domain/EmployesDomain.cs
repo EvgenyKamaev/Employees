@@ -1,4 +1,6 @@
-﻿namespace Employes.Infrastructure.Domain
+﻿using Employes.Infrastructure.Enums;
+
+namespace Employes.Infrastructure.Domain
 {
     /// <summary>
     /// Сотрудники
@@ -28,7 +30,7 @@
         /// <summary>
         /// Пол
         /// </summary>
-        public string Gender { get; set; }
+        public EGender Gender { get; set; }
 
         /// <summary>
         /// Удален?

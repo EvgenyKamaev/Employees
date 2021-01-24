@@ -30,3 +30,4 @@ D:\Projects\Employes\Employes.Infrastructure\obj\Debug\Employes.Infrastructure.c
 D:\Projects\Employes\Employes.Infrastructure\obj\Debug\Employes.Infrastructure.csproj.CopyComplete
 D:\Projects\Employes\Employes.Infrastructure\obj\Debug\Employes.Infrastructure.dll
 D:\Projects\Employes\Employes.Infrastructure\obj\Debug\Employes.Infrastructure.pdb
+D:\Projects\Employes\Employes.Infrastructure\obj\Debug\Employes.Infrastructure.Migrations.v04.resources

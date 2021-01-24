@@ -89,6 +89,7 @@
     <Compile Include="Domain\EmployesDomain.cs" />
     <Compile Include="Domain\ExperienceDomain.cs" />
     <Compile Include="Domain\LanguagesDomain.cs" />
+    <Compile Include="Enums\EGender.cs" />
     <Compile Include="Mapping\DepartmentMap.cs" />
     <Compile Include="Mapping\EmployesMap.cs" />
     <Compile Include="Mapping\ExperienceMap.cs" />
@@ -105,6 +106,10 @@
     <Compile Include="Migrations\202101211148597_v.0.3.designer.cs">
       <DependentUpon>202101211148597_v.0.3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101241318183_v.0.4.cs" />
+    <Compile Include="Migrations\202101241318183_v.0.4.designer.cs">
+      <DependentUpon>202101241318183_v.0.4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Services\EmployesService.cs" />
     <Compile Include="Services\Interfaces\IEmployesService.cs" />
@@ -118,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101211148597_v.0.3.resx">
       <DependentUpon>202101211148597_v.0.3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101241318183_v.0.4.resx">
+      <DependentUpon>202101241318183_v.0.4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

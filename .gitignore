@@ -4,3 +4,6 @@
 *.ide-shm
 *.ide-wal
 .vs/Employes.Web/v16/.suo
+.vs/Employes.Web/config/applicationhost.config
+Employes.Infrastructure/bin/Debug/Employes.Infrastructure.pdb
+*.pdb
