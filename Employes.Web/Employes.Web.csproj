@@ -172,11 +172,13 @@
     <Compile Include="Classes\DepartmentModel.cs" />
     <Compile Include="Classes\LanguagesModel.cs" />
     <Compile Include="Controllers\AddController.cs" />
+    <Compile Include="Controllers\EditController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AddModel.cs" />
+    <Compile Include="Models\EditModel.cs" />
     <Compile Include="Models\HomeModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tools\Singleton.cs" />
@@ -403,6 +405,7 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Add\Index.cshtml" />
+    <Content Include="Views\Edit\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

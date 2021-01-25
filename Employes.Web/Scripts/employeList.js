@@ -52,11 +52,12 @@
             }
         },
         showInfo: function (info) {
+           
             $.ajax({
-                url: '/Review/ShowInfo',
-                type: 'POST',
-                data: info.ReviewInfo,
+                url: '/Home/ShowInfo?employeId=' + info.Id,
+                type: 'GET',
                 success: function(result) {
+                    console.log(result);
                     window.location.href = result.redirectUrl;
                 }
             });

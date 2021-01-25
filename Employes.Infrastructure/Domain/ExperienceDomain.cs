@@ -11,8 +11,14 @@ namespace Employes.Infrastructure.Domain
         /// </summary>
         public int LanguageId { get; set; }
 
+        /// <summary>
+        /// Ид
+        /// </summary>
         public int EmployeId { get; set; }
 
+        /// <summary>
+        /// Языки
+        /// </summary>
         public virtual LanguagesDomain Languages { get; set; }
     }
 }

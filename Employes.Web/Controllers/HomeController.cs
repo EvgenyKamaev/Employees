@@ -43,5 +43,21 @@ namespace Employes.Web.Controllers
                 throw;
             }
         }
+
+        [HttpGet]
+        public ActionResult ShowInfo(int employeId)
+        {
+            TempData["employeId"] = employeId;
+            // return RedirectToAction("Index", "Edit");
+            var t  = Url.Action("Index", "Edit");
+            return Json(new { redirectUrl = Url.Action("Index", "Edit") });
+        }
+
+        public ActionResult Info()
+        {
+            TempData.Keep("infoModel");
+            var info = TempData["infoModel"];
+            return View(info);
+        }
     }
 }
