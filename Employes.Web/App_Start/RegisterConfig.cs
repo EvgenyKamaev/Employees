@@ -29,6 +29,8 @@ namespace Employes.Web.App_Start
             perRequestBuilder.RegisterType<EmployesContext>().As<IDbContext>().InstancePerRequest();
             perRequestBuilder.RegisterGeneric(typeof(EfRepository<>)).As(typeof(IRepository<>)).InstancePerDependency();
             perRequestBuilder.RegisterType<EmployesService>().As<IEmployesService>().InstancePerDependency();
+            perRequestBuilder.RegisterType<DepartmentsService>().As<IDepartmentsService>().InstancePerDependency();
+            perRequestBuilder.RegisterType<LanguagesService>().As<ILanguagesService>().InstancePerDependency();
 
             var perRequestContainer = perRequestBuilder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(perRequestContainer));

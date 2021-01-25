@@ -1,27 +1,16 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Employes.Infrastructure.Domain
 {
     public class ExperienceDomain : BaseDomain
     {
         /// <summary>
-        /// Ид
-        /// </summary>
-        public int ExperienceId { get; set; }
-
-        /// <summary>
         /// Ид языка
         /// </summary>
         public int LanguageId { get; set; }
 
-        /// <summary>
-        /// Сотрудник
-        /// </summary>
-        public virtual EmployesDomain Employe { get; set; }
-
-        /// <summary>
-        /// Языки
-        /// </summary>
-        public virtual List<LanguagesDomain> Languages { get; set; } = new List<LanguagesDomain>();
+        public virtual LanguagesDomain Languages { get; set; }
     }
 }

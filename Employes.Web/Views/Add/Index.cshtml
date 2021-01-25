@@ -1,0 +1,111 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using System.Web.Optimization
+@using Newtonsoft.Json
+@model Employes.Web.Models.AddModel
+<h2>Добавление сотрудника</h2>
+<br />
+<form method="post" action="" class="needs-validation" id="validation" novalidate>
+    <div class="form-row">
+        <div class="col-md-4 mb-3">
+            <label for="validationCustom01">Фамилия <sup class="required">*</sup></label>
+            <input type="text" class="form-control" placeholder="Имя пользователя" aria-label="Фамилия" id="LastName" required>
+            <div class="invalid-feedback">
+                Пожалуйста введите фамилию.
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label for="validationCustom02">Имя <sup class="required">*</sup></label>
+            <input type="text" class="form-control" placeholder="Имя" aria-label="Имя" id="FirstName" required>
+            <div class="invalid-feedback">
+                Пожалуйста введите имя.
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label for="validationCustomAge">Возраст <sup class="required">*</sup></label>
+            <input type="text" class="form-control" placeholder="Возраст" aria-label="Возраст" id="Age" required>
+                <div class="invalid-feedback">
+                Пожалуйста введите возраст.
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-4 mb-3">
+            <label>Пол <sup class="required">*</sup></label>
+            <select class="custom-select" id="Gender">
+                <option value="1" selected>Мужской</option>
+                <option value="2">Женский</option>
+            </select>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label>Отдел <sup class="required">*</sup></label>
+            <select class="custom-select" id="Department" data-bind="foreach: departments">
+                <option id="select" data-bind="text: $data.DepartmentName, value: $data.DepartmentId"></option>
+            </select>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label>Язык <sup class="required">*</sup></label>
+            <select class="custom-select" id="Languages" data-bind="foreach: languages">
+                <option id="select" data-bind="text: $data.Name, value: $data.LanguageId"></option>
+            </select>
+        </div>
+    </div>
+    <div class="form-row">
+        <div style="margin-left: 5px;">
+            <button type="submit" class="btn btn-outline-primary">Отправить</button>
+        </div>
+        @*<div class="response" style="display: none; margin-top: -20px; margin-left: 40px;">
+            @Html.Raw(File.ReadAllText(Server.MapPath("~/Content/load.svg")))
+        </div>*@
+    </div>
+</form>
+@section Scripts{
+    @Scripts.Render("~/bundles/addList")
+    <script type="text/javascript">
+        var addListModel = addListModel(@Html.Raw(JsonConvert.SerializeObject(this.Model)));
+        ko.applyBindings(addListModel);
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                var forms = document.getElementsByClassName('needs-validation');
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();                           
+                        }
+                        if (form.checkValidity() === true) {
+                            var divs = document.getElementsByTagName('div');
+                            for(var i = divs.length; i-- ;) {
+                                var div = divs[i];
+                                if(div.className === 'response') {
+                                    div.style.display = 'flex';
+                                }
+                            }
+                            event.preventDefault();
+                            var request = new Object();
+                            request.lastName = $('#LastName').val();
+                            request.firstName = $('#FirstName').val();
+                            request.age = $('#Age').val();
+                            request.gender = $('#Gender').val();
+                            request.department = $('#Department').val();
+                            request.language = $('#Languages').val();
+
+                            $.ajax({
+                                url: '/Add/AddEmploye',
+                                type: 'POST',
+                                dataType: 'json',
+                                data: request,
+                                success: function (result) {
+                                    window.location.href = result.redirectUrl;                                     
+                                }
+                            })
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+}

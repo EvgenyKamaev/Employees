@@ -8,8 +8,7 @@ namespace Employes.Infrastructure.Mapping
         public ExperienceMap()
         {
             ToTable("Experiences");
-            HasKey(domain => domain.ExperienceId);
-            HasRequired(domain => domain.Languages).WithMany().HasForeignKey(exp => exp.LanguageId);
+            //HasKey(domain => domain.EmployeId);
         }
     }
 }

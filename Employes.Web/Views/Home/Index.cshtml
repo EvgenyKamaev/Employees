@@ -6,18 +6,19 @@
 @model List<Employes.Web.Models.HomeModel>
 <h2>Информация о сотрудниках компании</h2>
 <br />
+
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+        <button class="btn btn-primary" type="button">Поиск</button>
+    </div>
+    <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" data-bind="textInput: searchValue" id="input">
+</div>
 <!-- ko if: allData().length === 0 && currentData().length === 0-->
 <div style="color:red">
     Список сотрудников пуст.
 </div>
 <!-- /ko -->
 <!-- ko if: allData().length != 0 || currentData().length != 0-->
-<div class="input-group mb-3">
-    <div class="input-group-prepend">
-        <button class="btn btn-primary" type="button">Поиск</button>
-    </div>
-    <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-</div>
 <br />
 <div class="row">
     <div class="col">
@@ -50,13 +51,10 @@
     </div>
 </div>
 <!-- /ko -->
+<!-- ko if: allData().length > 0 -->
 <br />
 <div>
-    <button type="submit" class="btn btn-outline-primary" data-toggle="modal" data-target="#addModal">Добавить</button>
-</div>
-<!-- ko if: allData().length > 0 -->
-<div>
-    <button type="submit" class="btn btn-outline-primary" data-bind="click: showMore">Больше сотрудников</button>
+    <button type="submit" class="btn btn-outline-primary" data-bind="click: showMore">Больше записей</button>
 </div>
 <!-- /ko -->
 <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
@@ -78,29 +76,10 @@
         </div>
     </div>
 </div>
-<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="addModalLabel">Добавление сотрудника</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                Зздесь описать поля
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-                <button type="button" class="btn btn-primary" data-bind="click: addEmploye" data-dismiss="modal">Добавить</button>
-            </div>
-        </div>
-    </div>
-</div>
 @section Scripts{
     @Scripts.Render("~/bundles/employeList")
     <script type="text/javascript">
-    var employeListModel = employeListModel(@Html.Raw(JsonConvert.SerializeObject(this.Model)));
-    ko.applyBindings(employeListModel);
+     var employeListModel = employeListModel(@Html.Raw(JsonConvert.SerializeObject(this.Model)));
+        ko.applyBindings(employeListModel);
     </script>
 }

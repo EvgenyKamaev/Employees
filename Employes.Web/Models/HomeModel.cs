@@ -1,4 +1,6 @@
-﻿namespace Employes.Web.Models
+﻿using System.Collections.Generic;
+
+namespace Employes.Web.Models
 {
     public class HomeModel
     {

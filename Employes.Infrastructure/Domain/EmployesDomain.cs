@@ -1,4 +1,5 @@
-﻿using Employes.Infrastructure.Enums;
+﻿using System.Collections.Generic;
+using Employes.Infrastructure.Enums;
 
 namespace Employes.Infrastructure.Domain
 {
@@ -42,5 +43,9 @@ namespace Employes.Infrastructure.Domain
         /// </summary>
         public virtual DepartmentDomain Department { get; set; }
 
+        /// <summary>
+        /// Опыт
+        /// </summary>
+        public virtual List<ExperienceDomain> Experiences { get; set; } = new List<ExperienceDomain>();
     }
 }
