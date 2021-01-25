@@ -11,6 +11,8 @@ namespace Employes.Infrastructure.Domain
         /// </summary>
         public int LanguageId { get; set; }
 
+        public int EmployeId { get; set; }
+
         public virtual LanguagesDomain Languages { get; set; }
     }
 }

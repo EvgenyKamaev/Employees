@@ -8,7 +8,7 @@ namespace Employes.Infrastructure.Mapping
         public ExperienceMap()
         {
             ToTable("Experiences");
-            //HasKey(domain => domain.EmployeId);
+            HasKey(domain => domain.EmployeId);
         }
     }
 }

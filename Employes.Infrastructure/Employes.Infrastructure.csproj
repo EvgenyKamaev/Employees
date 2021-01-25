@@ -77,7 +77,11 @@
       <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202101251716387_v.0.1.resx">
+      <DependentUpon>202101251716387_v.0.1.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\DataInitializer.cs" />
     <Compile Include="Data\EfRepository.cs" />
@@ -94,37 +98,9 @@
     <Compile Include="Mapping\EmployesMap.cs" />
     <Compile Include="Mapping\ExperienceMap.cs" />
     <Compile Include="Mapping\LanguagesMap.cs" />
-    <Compile Include="Migrations\202101211131562_v.0.1.cs" />
-    <Compile Include="Migrations\202101211131562_v.0.1.designer.cs">
-      <DependentUpon>202101211131562_v.0.1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202101211136278_v.0.2.cs" />
-    <Compile Include="Migrations\202101211136278_v.0.2.designer.cs">
-      <DependentUpon>202101211136278_v.0.2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202101211148597_v.0.3.cs" />
-    <Compile Include="Migrations\202101211148597_v.0.3.designer.cs">
-      <DependentUpon>202101211148597_v.0.3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202101241318183_v.0.4.cs" />
-    <Compile Include="Migrations\202101241318183_v.0.4.designer.cs">
-      <DependentUpon>202101241318183_v.0.4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202101250913032_v.0.5.cs" />
-    <Compile Include="Migrations\202101250913032_v.0.5.Designer.cs">
-      <DependentUpon>202101250913032_v.0.5.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202101251101242_v.0.6.cs" />
-    <Compile Include="Migrations\202101251101242_v.0.6.Designer.cs">
-      <DependentUpon>202101251101242_v.0.6.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202101251109308_v.0.8.cs" />
-    <Compile Include="Migrations\202101251109308_v.0.8.Designer.cs">
-      <DependentUpon>202101251109308_v.0.8.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202101251153362_v.0.9.cs" />
-    <Compile Include="Migrations\202101251153362_v.0.9.Designer.cs">
-      <DependentUpon>202101251153362_v.0.9.cs</DependentUpon>
+    <Compile Include="Migrations\202101251716387_v.0.1.cs" />
+    <Compile Include="Migrations\202101251716387_v.0.1.Designer.cs">
+      <DependentUpon>202101251716387_v.0.1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Services\DepartmentsService.cs" />
@@ -133,32 +109,6 @@
     <Compile Include="Services\Interfaces\IEmployesService.cs" />
     <Compile Include="Services\Interfaces\ILanguagesService.cs" />
     <Compile Include="Services\LanguagesService.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202101211131562_v.0.1.resx">
-      <DependentUpon>202101211131562_v.0.1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101211136278_v.0.2.resx">
-      <DependentUpon>202101211136278_v.0.2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101211148597_v.0.3.resx">
-      <DependentUpon>202101211148597_v.0.3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101241318183_v.0.4.resx">
-      <DependentUpon>202101241318183_v.0.4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101250913032_v.0.5.resx">
-      <DependentUpon>202101250913032_v.0.5.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101251101242_v.0.6.resx">
-      <DependentUpon>202101251101242_v.0.6.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101251109308_v.0.8.resx">
-      <DependentUpon>202101251109308_v.0.8.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101251153362_v.0.9.resx">
-      <DependentUpon>202101251153362_v.0.9.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -4,7 +4,7 @@ using System.Data.Entity;
 
 namespace Employes.Infrastructure.Data
 {
-    public class DataInitializer : CreateDatabaseIfNotExists<EmployesContext>
+    public class DataInitializer : DropCreateDatabaseAlways<EmployesContext>
     {
         protected override void Seed(EmployesContext db)
         {
