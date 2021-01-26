@@ -7,3 +7,6 @@
 .vs/Employes.Web/config/applicationhost.config
 Employes.Infrastructure/bin/Debug/Employes.Infrastructure.pdb
 *.pdb
+Employes.Web/obj/Debug/Employes.Web.csprojAssemblyReference.cache
+*.cache
+Employes.Web/obj/Debug/Employes.Web.csprojAssemblyReference.cache
