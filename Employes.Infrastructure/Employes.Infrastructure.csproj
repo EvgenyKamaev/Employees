@@ -78,11 +78,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202101251716387_v.0.1.resx">
-      <DependentUpon>202101251716387_v.0.1.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Data\DataInitializer.cs" />
     <Compile Include="Data\EfRepository.cs" />
     <Compile Include="Data\EmployesContext.cs" />
@@ -98,17 +93,24 @@
     <Compile Include="Mapping\EmployesMap.cs" />
     <Compile Include="Mapping\ExperienceMap.cs" />
     <Compile Include="Mapping\LanguagesMap.cs" />
-    <Compile Include="Migrations\202101251716387_v.0.1.cs" />
-    <Compile Include="Migrations\202101251716387_v.0.1.Designer.cs">
-      <DependentUpon>202101251716387_v.0.1.cs</DependentUpon>
+    <Compile Include="Migrations\202101261358338_v.0.1.cs" />
+    <Compile Include="Migrations\202101261358338_v.0.1.Designer.cs">
+      <DependentUpon>202101261358338_v.0.1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Services\DepartmentsService.cs" />
     <Compile Include="Services\EmployesService.cs" />
+    <Compile Include="Services\ExperienceService.cs" />
     <Compile Include="Services\Interfaces\IDepartmentsService.cs" />
     <Compile Include="Services\Interfaces\IEmployesService.cs" />
+    <Compile Include="Services\Interfaces\IExperienceService.cs" />
     <Compile Include="Services\Interfaces\ILanguagesService.cs" />
     <Compile Include="Services\LanguagesService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202101261358338_v.0.1.resx">
+      <DependentUpon>202101261358338_v.0.1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

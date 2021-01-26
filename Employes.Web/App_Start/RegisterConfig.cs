@@ -31,6 +31,7 @@ namespace Employes.Web.App_Start
             perRequestBuilder.RegisterType<EmployesService>().As<IEmployesService>().InstancePerDependency();
             perRequestBuilder.RegisterType<DepartmentsService>().As<IDepartmentsService>().InstancePerDependency();
             perRequestBuilder.RegisterType<LanguagesService>().As<ILanguagesService>().InstancePerDependency();
+            perRequestBuilder.RegisterType<ExperienceService>().As<IExperienceService>().InstancePerDependency();
 
             var perRequestContainer = perRequestBuilder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(perRequestContainer));

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using Employes.Web.Classes;
 
 namespace Employes.Web.Models
 {
@@ -16,6 +17,10 @@ namespace Employes.Web.Models
 
         public string Department { get; set; }
 
-        public List<int> Language { get; set; }
+        public string SelectedLanguage { get; set; }
+
+        public List<string> Departments { get; set; }
+
+        public List<string> Languages { get; set; }
     }
 }

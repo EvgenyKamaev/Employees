@@ -21,11 +21,7 @@ E:\Employes\Employes.Infrastructure\bin\Debug\System.Memory.xml
 E:\Employes\Employes.Infrastructure\bin\Debug\System.Numerics.Vectors.xml
 E:\Employes\Employes.Infrastructure\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 E:\Employes\Employes.Infrastructure\bin\Debug\System.Threading.Tasks.Extensions.xml
-E:\Employes\Employes.Infrastructure\obj\Debug\Employes.Infrastructure.csprojAssemblyReference.cache
 E:\Employes\Employes.Infrastructure\obj\Debug\Employes.Infrastructure.Migrations.v01.resources
-E:\Employes\Employes.Infrastructure\obj\Debug\Employes.Infrastructure.Migrations.v02.resources
-E:\Employes\Employes.Infrastructure\obj\Debug\Employes.Infrastructure.Migrations.v03.resources
-E:\Employes\Employes.Infrastructure\obj\Debug\Employes.Infrastructure.Migrations.v04.resources
 E:\Employes\Employes.Infrastructure\obj\Debug\Employes.Infrastructure.csproj.GenerateResource.cache
 E:\Employes\Employes.Infrastructure\obj\Debug\Employes.Infrastructure.csproj.CoreCompileInputs.cache
 E:\Employes\Employes.Infrastructure\obj\Debug\Employes.Infrastructure.csproj.CopyComplete
@@ -60,5 +56,8 @@ D:\Projects\Employes\Employes.Infrastructure\obj\Debug\Employes.Infrastructure.c
 D:\Projects\Employes\Employes.Infrastructure\obj\Debug\Employes.Infrastructure.csproj.CopyComplete
 D:\Projects\Employes\Employes.Infrastructure\obj\Debug\Employes.Infrastructure.dll
 D:\Projects\Employes\Employes.Infrastructure\obj\Debug\Employes.Infrastructure.pdb
+E:\Employes\Employes.Infrastructure\bin\Debug\Employes.Infrastructure.dll.config
+E:\Employes\Employes.Infrastructure\obj\Debug\Employes.Infrastructure.Migrations.v02.resources
+E:\Employes\Employes.Infrastructure\obj\Debug\Employes.Infrastructure.Migrations.v03.resources
 D:\Projects\Employes\Employes.Infrastructure\obj\Debug\Employes.Infrastructure.Migrations.v01.resources
 D:\Projects\Employes\Employes.Infrastructure\obj\Debug\Employes.Infrastructure.csproj.GenerateResource.cache

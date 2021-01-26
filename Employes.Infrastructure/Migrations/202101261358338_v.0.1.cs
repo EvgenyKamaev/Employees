@@ -37,10 +37,13 @@ namespace Employes.Infrastructure.Migrations
                         Gender = c.Int(nullable: false),
                         IsDeleted = c.Boolean(nullable: false),
                         Department_DepartmentId = c.Int(),
+                        Experience_EmployeId = c.Int(),
                     })
                 .PrimaryKey(t => t.EmployeId)
                 .ForeignKey("dbo.Departments", t => t.Department_DepartmentId)
-                .Index(t => t.Department_DepartmentId);
+                .ForeignKey("dbo.Experiences", t => t.Experience_EmployeId)
+                .Index(t => t.Department_DepartmentId)
+                .Index(t => t.Experience_EmployeId);
             
             CreateTable(
                 "dbo.Experiences",
@@ -48,23 +51,20 @@ namespace Employes.Infrastructure.Migrations
                     {
                         EmployeId = c.Int(nullable: false, identity: true),
                         LanguageId = c.Int(nullable: false),
-                        EmployesDomain_EmployeId = c.Int(),
                     })
                 .PrimaryKey(t => t.EmployeId)
                 .ForeignKey("dbo.Languages", t => t.LanguageId, cascadeDelete: true)
-                .ForeignKey("dbo.Employes", t => t.EmployesDomain_EmployeId)
-                .Index(t => t.LanguageId)
-                .Index(t => t.EmployesDomain_EmployeId);
+                .Index(t => t.LanguageId);
             
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.Experiences", "EmployesDomain_EmployeId", "dbo.Employes");
+            DropForeignKey("dbo.Employes", "Experience_EmployeId", "dbo.Experiences");
             DropForeignKey("dbo.Experiences", "LanguageId", "dbo.Languages");
             DropForeignKey("dbo.Employes", "Department_DepartmentId", "dbo.Departments");
-            DropIndex("dbo.Experiences", new[] { "EmployesDomain_EmployeId" });
             DropIndex("dbo.Experiences", new[] { "LanguageId" });
+            DropIndex("dbo.Employes", new[] { "Experience_EmployeId" });
             DropIndex("dbo.Employes", new[] { "Department_DepartmentId" });
             DropTable("dbo.Experiences");
             DropTable("dbo.Employes");

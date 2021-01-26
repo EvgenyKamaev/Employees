@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Employes.Web.Classes;
 
 namespace Employes.Web.Controllers
 {
@@ -44,20 +45,11 @@ namespace Employes.Web.Controllers
             }
         }
 
-        [HttpGet]
-        public ActionResult ShowInfo(int employeId)
+        [HttpPost]
+        public ActionResult ShowInfo(HomeModel info)
         {
-            TempData["employeId"] = employeId;
-            // return RedirectToAction("Index", "Edit");
-            var t  = Url.Action("Index", "Edit");
+            TempData["employeInfo"] = info;
             return Json(new { redirectUrl = Url.Action("Index", "Edit") });
-        }
-
-        public ActionResult Info()
-        {
-            TempData.Keep("infoModel");
-            var info = TempData["infoModel"];
-            return View(info);
         }
     }
 }

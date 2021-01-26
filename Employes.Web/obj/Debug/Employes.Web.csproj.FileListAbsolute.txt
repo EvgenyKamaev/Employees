@@ -235,3 +235,4 @@ D:\Projects\Employes\Employes.Web\obj\Debug\Employes.Web.csproj.CoreCompileInput
 D:\Projects\Employes\Employes.Web\obj\Debug\Employes.Web.csproj.CopyComplete
 D:\Projects\Employes\Employes.Web\obj\Debug\Employes.Web.dll
 D:\Projects\Employes\Employes.Web\obj\Debug\Employes.Web.pdb
+E:\Employes\Employes.Web\bin\Employes.Infrastructure.dll.config

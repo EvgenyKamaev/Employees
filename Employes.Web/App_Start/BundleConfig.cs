@@ -24,6 +24,8 @@ namespace Employes.Web
                 "~/Scripts/employeList.js"));
             bundles.Add(new ScriptBundle("~/bundles/addList").Include(
                 "~/Scripts/addList.js"));
+            bundles.Add(new ScriptBundle("~/bundles/edit").Include(
+                "~/Scripts/edit.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/Site.css"));

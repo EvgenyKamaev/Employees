@@ -52,12 +52,13 @@
             }
         },
         showInfo: function (info) {
-           
+            console.log(info);
             $.ajax({
-                url: '/Home/ShowInfo?employeId=' + info.Id,
-                type: 'GET',
+                url: '/Home/ShowInfo',
+                type: 'POST',
+                data: info,
                 success: function(result) {
-                    console.log(result);
+                    
                     window.location.href = result.redirectUrl;
                 }
             });
@@ -89,7 +90,6 @@
                 type: 'POST',
                 data: info.ReviewInfo,
                 success: function() {
-                    console.log(1);
                 }
             });
         }

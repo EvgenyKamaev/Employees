@@ -46,6 +46,6 @@ namespace Employes.Infrastructure.Domain
         /// <summary>
         /// Опыт
         /// </summary>
-        public virtual List<ExperienceDomain> Experiences { get; set; } = new List<ExperienceDomain>();
+        public virtual ExperienceDomain Experience { get; set; } 
     }
 }

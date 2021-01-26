@@ -63,13 +63,12 @@ namespace Employes.Web.Controllers
                     Age = Int32.Parse(model.Age),
                     IsDeleted = false,
                     Department = department,
-                    Gender = (EGender)model.Gender
+                    Gender = (EGender)model.Gender,
+                    Experience = new ExperienceDomain()
+                    {
+                        LanguageId = model.Language
+                    }
                 };
-                data.Experiences.Add(new ExperienceDomain()
-                {
-                    LanguageId = language.LanguageId,
-                    
-                });
                 _employesService.AddEmploye(data);
                 return Json(new { redirectUrl = Url.Action("Index", "Home") });
             }
