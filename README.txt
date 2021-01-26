@@ -21,4 +21,4 @@
 2. Пагинация вывода списка сотрудников без рефреша страницы
 3. Автокомплит для поля "Имя" реализован на основе уже добавленных в БД имен.
 4. Использовались следующие инструменты:
-autofac,entity framework, knockout, jquery, js, bootstrap
+autofac,entity framework, knockout, jquery, js,css, bootstrap
